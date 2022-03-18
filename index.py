@@ -15,7 +15,7 @@ AUTH_SERVER = ""
 
 
 def get_auth_code():
-    AUTHORIZATION_URL = AUTH_SERVER + "/authorize?response_type=code&client_id={client_id}&scopes={scopes}&redirect_uri={redirect_uri}".format(
+    AUTHORIZATION_URL = AUTH_SERVER + "/authorize?response_type=code&client_id={client_id}&scope={scopes}&redirect_uri={redirect_uri}".format(
         client_id=CLIENT_ID, scopes=SCOPES, redirect_uri=REDIRECT_URI)
 
     webbrowser.open(AUTHORIZATION_URL)
